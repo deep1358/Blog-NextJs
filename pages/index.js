@@ -28,12 +28,11 @@ export default function Home({ allBlogs }) {
     });
 
     setBlogs(blogs.concat(newBlogs));
-
-    setLoading(false);
-
     if (newBlogs.length < 3) {
       setEnd(true);
     }
+
+    setLoading(false);
   };
 
   return (
