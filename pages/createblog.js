@@ -31,7 +31,7 @@ const createblog = ({ user }) => {
         setBody("");
         setImage(null);
         setUrl("");
-        // router.push("/");
+        router.push("/");
       } catch (e) {
         M.toast({ html: "error occured", classes: "red" });
       }
