@@ -1,0 +1,151 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.input-field input[type="text"]:focus,
+.input-field input[type="password"]:focus,
+.input-field input[type="email"]:focus {
+  border-bottom: 1px solid #0288d1 !important;
+  box-shadow: none !important;
+}
+.cssload-container {
+  position: relative;
+}
+
+.cssload-whirlpool,
+.cssload-whirlpool::before,
+.cssload-whirlpool::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgb(204, 204, 204);
+  border-left-color: rgb(0, 0, 0);
+  border-radius: 974px;
+  -o-border-radius: 974px;
+  -ms-border-radius: 974px;
+  -webkit-border-radius: 974px;
+  -moz-border-radius: 974px;
+}
+
+.cssload-whirlpool {
+  margin: -24px 0 0 -24px;
+  height: 49px;
+  width: 49px;
+  animation: cssload-rotate 1150ms linear infinite;
+  -o-animation: cssload-rotate 1150ms linear infinite;
+  -ms-animation: cssload-rotate 1150ms linear infinite;
+  -webkit-animation: cssload-rotate 1150ms linear infinite;
+  -moz-animation: cssload-rotate 1150ms linear infinite;
+}
+
+.cssload-whirlpool::before {
+  content: "";
+  margin: -22px 0 0 -22px;
+  height: 43px;
+  width: 43px;
+  animation: cssload-rotate 1150ms linear infinite;
+  -o-animation: cssload-rotate 1150ms linear infinite;
+  -ms-animation: cssload-rotate 1150ms linear infinite;
+  -webkit-animation: cssload-rotate 1150ms linear infinite;
+  -moz-animation: cssload-rotate 1150ms linear infinite;
+}
+
+.cssload-whirlpool::after {
+  content: "";
+  margin: -28px 0 0 -28px;
+  height: 55px;
+  width: 55px;
+  animation: cssload-rotate 2300ms linear infinite;
+  -o-animation: cssload-rotate 2300ms linear infinite;
+  -ms-animation: cssload-rotate 2300ms linear infinite;
+  -webkit-animation: cssload-rotate 2300ms linear infinite;
+  -moz-animation: cssload-rotate 2300ms linear infinite;
+}
+
+@keyframes cssload-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes cssload-rotate {
+  100% {
+    -o-transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes cssload-rotate {
+  100% {
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes cssload-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes cssload-rotate {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+.backToTop {
+  position: fixed;
+  bottom: 4%;
+  right: 3%;
+  background: gray;
+  padding: 12px;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+.backToTop:hover {
+  opacity: 0.5;
+}
+/* .scrollTop {
+	position: fixed;
+	right: 30px;
+	bottom: 5%;
+	align-items: center;
+	height: 20px;
+	justify-content: center;
+	z-index: 1000;
+	cursor: pointer;
+	animation: fadeIn 0.3s;
+	transition: opacity 0.4s;
+	opacity: 0.5;
+	padding: 0.5rem;
+	background-color: grey;
+	border-radius: 50%;
+}
+
+.scrollTop:hover {
+	opacity: 1;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+} */
