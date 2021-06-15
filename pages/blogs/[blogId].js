@@ -12,6 +12,10 @@ const blogPage = ({ blog, user, allComments }) => {
   const { blogId } = router.query;
 
   const makeComment = () => {
+    if(!comment){
+      M.toast({ html: "Comment can't be empty", classes: "red" });
+      return;
+    }
     db.collection("Blogs")
       .doc(blogId)
       .collection("comments")
@@ -36,7 +40,7 @@ const blogPage = ({ blog, user, allComments }) => {
     <div className="container center">
       <h2>{blog.title}</h2>
       <h5>Created on {new Date(blog.createdAt).toDateString()}</h5>
-      <img src={blog.imageUrl} alt={blog.title} />
+      <img style={{maxWidth:"600px",maxHeight:"600px"}} src={blog.imageUrl} alt={blog.title} />
       <p
         style={{
           overflowWrap: "anywhere",

@@ -53,17 +53,26 @@ export default function Home({ allBlogs }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
       </Head>
-      <div className="center" style={{ marginBottom: "5vh !important" }}>
+      <div className="center">
         {blogs.map((blog) => (
           <div className="card" key={blog.id}>
-            <div className="card-image">
-              <img src={blog.imageUrl} alt={blog.title} />
-              <span className="card-title">{blog.title}</span>
+            <div className="card-image" style={{ background: "black" }}>
+              <img
+                style={{ opacity: ".6", maxHeight: "500px" }}
+                src={blog.imageUrl}
+                alt={blog.title}
+              />
+              <span
+                style={{ fontWeight: 700, overflowWrap: "anywhere" }}
+                className="card-title"
+              >
+                {blog.title}
+              </span>
             </div>
-            <div className="card-content">
+            <div className="card-content" style={{ padding: "1rem" }}>
               <p>{blog.body}</p>
             </div>
             <div className="card-action">
@@ -74,10 +83,11 @@ export default function Home({ allBlogs }) {
           </div>
         ))}
 
-        {end == false ? (
+        {end === false ? (
           !loading ? (
             <button
               onClick={loadMore}
+              style={{ marginBottom: "5vh !important" }}
               className="btn #0288d1 light-blue darken-2"
             >
               Load More

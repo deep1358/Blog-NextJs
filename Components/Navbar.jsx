@@ -10,7 +10,7 @@ const Navbar = ({ user }) => {
             Blog
           </a>
         </Link>
-        <ul id="nav-mobile" className="right">
+        <ul id="nav-mobile" style={{ marginRight: "1rem" }} className="right">
           {user ? (
             <>
               <li>
