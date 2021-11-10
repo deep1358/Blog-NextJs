@@ -12,13 +12,12 @@ var firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
+if(firebase && !firebase.apps.length)
+  firebase.initializeApp(firebaseConfig)
 
-  if(!firebase.apps.length){
-firebase.initializeApp(firebaseConfig)}
-
-const auth = firebase.auth()
-const db = firebase.firestore()
-const storage = firebase.storage()
-const serverTimestamp = firebase.firestore.FieldValue.serverTimestamp
+const auth = firebase && firebase.auth()
+const db = firebase && firebase.firestore()
+const storage = firebase && firebase.storage()
+const serverTimestamp = firebase && firebase.firestore.FieldValue.serverTimestamp
 
 export {auth,db,storage,serverTimestamp}
